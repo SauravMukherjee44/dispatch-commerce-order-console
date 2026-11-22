@@ -1,0 +1,258 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "sku": "ST-101",
+      "name": "Field Notebook",
+      "category": "Paper goods",
+      "unit_cents": 1800,
+      "stock": 5,
+      "image": "notebook"
+    },
+    {
+      "id": 2,
+      "sku": "ST-102",
+      "name": "Cork Desk Mat",
+      "category": "Desk essentials",
+      "unit_cents": 3200,
+      "stock": 0,
+      "image": "mat"
+    },
+    {
+      "id": 3,
+      "sku": "ST-103",
+      "name": "Kiln Coffee Mug",
+      "category": "Drinkware",
+      "unit_cents": 2400,
+      "stock": 14,
+      "image": "mug"
+    },
+    {
+      "id": 4,
+      "sku": "ST-104",
+      "name": "Graphite Pen Set",
+      "category": "Writing tools",
+      "unit_cents": 1600,
+      "stock": 20,
+      "image": "pens"
+    },
+    {
+      "id": 5,
+      "sku": "ST-105",
+      "name": "Studio Pen Cup",
+      "category": "Desk essentials",
+      "unit_cents": 2200,
+      "stock": 8,
+      "image": "cup"
+    },
+    {
+      "id": 6,
+      "sku": "ST-106",
+      "name": "Arc Task Lamp",
+      "category": "Lighting",
+      "unit_cents": 6800,
+      "stock": 4,
+      "image": "lamp"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "reference": "ORD-1001",
+      "created_at": "2026-11-16T20:20:59+00:00",
+      "status": "Cancelled",
+      "total_cents": 1600,
+      "units": 1,
+      "items": [
+        {
+          "product_id": 4,
+          "sku": "ST-104",
+          "name": "Graphite Pen Set",
+          "image": "pens",
+          "unit_cents": 1600,
+          "quantity": 1,
+          "subtotal_cents": 1600
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "reference": "ORD-1002",
+      "created_at": "2026-11-17T18:20:59+00:00",
+      "status": "Shipped",
+      "total_cents": 6800,
+      "units": 1,
+      "items": [
+        {
+          "product_id": 6,
+          "sku": "ST-106",
+          "name": "Arc Task Lamp",
+          "image": "lamp",
+          "unit_cents": 6800,
+          "quantity": 1,
+          "subtotal_cents": 6800
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "reference": "ORD-1003",
+      "created_at": "2026-11-18T18:20:59+00:00",
+      "status": "Shipped",
+      "total_cents": 4600,
+      "units": 2,
+      "items": [
+        {
+          "product_id": 3,
+          "sku": "ST-103",
+          "name": "Kiln Coffee Mug",
+          "image": "mug",
+          "unit_cents": 2400,
+          "quantity": 1,
+          "subtotal_cents": 2400
+        },
+        {
+          "product_id": 5,
+          "sku": "ST-105",
+          "name": "Studio Pen Cup",
+          "image": "cup",
+          "unit_cents": 2200,
+          "quantity": 1,
+          "subtotal_cents": 2200
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "reference": "ORD-1004",
+      "created_at": "2026-11-19T22:20:59+00:00",
+      "status": "Packed",
+      "total_cents": 3200,
+      "units": 2,
+      "items": [
+        {
+          "product_id": 4,
+          "sku": "ST-104",
+          "name": "Graphite Pen Set",
+          "image": "pens",
+          "unit_cents": 1600,
+          "quantity": 2,
+          "subtotal_cents": 3200
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "reference": "ORD-1005",
+      "created_at": "2026-11-20T19:20:59+00:00",
+      "status": "Placed",
+      "total_cents": 2400,
+      "units": 1,
+      "items": [
+        {
+          "product_id": 3,
+          "sku": "ST-103",
+          "name": "Kiln Coffee Mug",
+          "image": "mug",
+          "unit_cents": 2400,
+          "quantity": 1,
+          "subtotal_cents": 2400
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "reference": "ORD-1006",
+      "created_at": "2026-11-21T07:20:59+00:00",
+      "status": "Packed",
+      "total_cents": 11200,
+      "units": 3,
+      "items": [
+        {
+          "product_id": 5,
+          "sku": "ST-105",
+          "name": "Studio Pen Cup",
+          "image": "cup",
+          "unit_cents": 2200,
+          "quantity": 2,
+          "subtotal_cents": 4400
+        },
+        {
+          "product_id": 6,
+          "sku": "ST-106",
+          "name": "Arc Task Lamp",
+          "image": "lamp",
+          "unit_cents": 6800,
+          "quantity": 1,
+          "subtotal_cents": 6800
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "reference": "ORD-1007",
+      "created_at": "2026-11-21T22:20:59+00:00",
+      "status": "Placed",
+      "total_cents": 3800,
+      "units": 2,
+      "items": [
+        {
+          "product_id": 4,
+          "sku": "ST-104",
+          "name": "Graphite Pen Set",
+          "image": "pens",
+          "unit_cents": 1600,
+          "quantity": 1,
+          "subtotal_cents": 1600
+        },
+        {
+          "product_id": 5,
+          "sku": "ST-105",
+          "name": "Studio Pen Cup",
+          "image": "cup",
+          "unit_cents": 2200,
+          "quantity": 1,
+          "subtotal_cents": 2200
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "reference": "ORD-1008",
+      "created_at": "2026-11-22T01:20:59+00:00",
+      "status": "Placed",
+      "total_cents": 13200,
+      "units": 4,
+      "items": [
+        {
+          "product_id": 3,
+          "sku": "ST-103",
+          "name": "Kiln Coffee Mug",
+          "image": "mug",
+          "unit_cents": 2400,
+          "quantity": 2,
+          "subtotal_cents": 4800
+        },
+        {
+          "product_id": 4,
+          "sku": "ST-104",
+          "name": "Graphite Pen Set",
+          "image": "pens",
+          "unit_cents": 1600,
+          "quantity": 1,
+          "subtotal_cents": 1600
+        },
+        {
+          "product_id": 6,
+          "sku": "ST-106",
+          "name": "Arc Task Lamp",
+          "image": "lamp",
+          "unit_cents": 6800,
+          "quantity": 1,
+          "subtotal_cents": 6800
+        }
+      ]
+    }
+  ],
+  "nextId": 9
+}

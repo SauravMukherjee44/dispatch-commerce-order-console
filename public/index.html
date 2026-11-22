@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="Create orders, check inventory, and manage fulfilment for Morrow Supply.">
+  <title>Orders · Dispatch</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#orders">
+        <span class="brand-emblem" data-icon="brand"></span>
+        <span><strong>Dispatch</strong><small>Order console</small></span>
+      </a>
+      <nav class="navigation" aria-label="Workspace">
+        <span class="nav-label">WORKSPACE</span>
+        <a href="#orders" id="nav-orders"><span data-icon="orders"></span> Orders</a>
+        <a href="#catalogue" id="nav-catalogue"><span data-icon="catalogue"></span> Catalogue</a>
+      </nav>
+      <div class="workspace">
+        <span class="workspace-avatar" aria-hidden="true">M</span>
+        <span><strong>Morrow Supply</strong><small>Store workspace</small></span>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="breadcrumbs">
+          <span class="breadcrumb-icon" data-icon="workspace"></span>
+          <span>Workspace</span>
+          <span data-icon="chevron-right"></span>
+          <span id="breadcrumb-current" aria-current="page">Orders</span>
+        </div>
+      </header>
+
+      <main id="main" tabindex="-1">
+        <div class="page-heading">
+          <div>
+            <h1 id="page-title">Orders</h1>
+            <p id="page-description">Create orders and track fulfilment in one place.</p>
+          </div>
+          <a class="button primary" id="new-order" href="#new-order"><span data-icon="plus"></span> New order</a>
+          <a class="button secondary" id="back-orders" href="#orders" hidden>Back to orders</a>
+        </div>
+
+        <div id="notice" class="notice" hidden>
+          <span id="notice-icon"></span>
+          <div id="notice-message" role="status"></div>
+          <button id="dismiss-notice" class="icon-button" aria-label="Dismiss message" data-icon="close"></button>
+        </div>
+
+        <section id="orders-view" aria-labelledby="page-title">
+          <div class="metrics" id="metrics" aria-label="Orders by status"></div>
+          <div class="order-layout">
+            <section class="panel list-panel" aria-labelledby="orders-list-title">
+              <div class="panel-heading">
+                <div class="list-title"><h2 id="orders-list-title">All orders</h2><span id="list-count" class="count-pill" aria-live="polite"></span></div>
+                <div class="filters">
+                  <div class="search-input">
+                    <span data-icon="search"></span>
+                    <input type="search" id="order-search" aria-label="Search by order reference" placeholder="Search by order reference" autocomplete="off">
+                  </div>
+                  <div class="select-input">
+                    <span data-icon="filter"></span>
+                    <select id="order-filter" aria-label="Filter by status">
+                      <option value="">All statuses</option>
+                      <option>Placed</option>
+                      <option>Packed</option>
+                      <option>Shipped</option>
+                      <option>Cancelled</option>
+                    </select>
+                    <span data-icon="chevron-down"></span>
+                  </div>
+                </div>
+              </div>
+              <div id="order-results" aria-busy="true"></div>
+              <div id="list-footer" class="list-footer" hidden></div>
+            </section>
+            <section class="panel detail-panel" id="order-detail" aria-label="Order details"></section>
+          </div>
+        </section>
+
+        <section id="products-view" aria-labelledby="page-title" hidden>
+          <div class="product-layout" id="product-layout">
+            <section class="catalogue-content" aria-labelledby="products-title">
+              <div class="catalogue-heading">
+                <h2 id="products-title">Products</h2>
+                <span id="product-count" class="count-pill"></span>
+                <button class="button secondary compact mobile-summary" id="mobile-summary" hidden></button>
+              </div>
+              <div id="product-grid" class="product-grid"></div>
+            </section>
+            <section class="panel basket-panel" id="basket" aria-label="Order summary" hidden></section>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <dialog id="cancel-dialog" aria-labelledby="cancel-title" aria-describedby="cancel-description">
+    <form method="dialog">
+      <div class="dialog-icon" data-icon="alert"></div>
+      <h2 id="cancel-title">Cancel this order?</h2>
+      <p id="cancel-description"></p>
+      <div class="dialog-actions">
+        <button class="button secondary" value="keep" autofocus>Keep order</button>
+        <button class="button danger" value="cancel">Cancel order</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

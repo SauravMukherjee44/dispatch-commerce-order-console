@@ -1,0 +1,39 @@
+{
+  "name": "dispatch-order-console",
+  "version": "2.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:demo": "node scripts/dev.mjs --demo",
+    "dev:web": "next dev frontend --hostname 127.0.0.1",
+    "build": "next build frontend",
+    "start": "next start frontend --hostname 127.0.0.1",
+    "typecheck": "next typegen frontend && tsc -p frontend/tsconfig.json --noEmit",
+    "test": "python3 -B -m unittest discover -s tests -v",
+    "build:netlify": "node scripts/build-netlify.mjs",
+    "test:hosted": "node --test netlify/tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.2.0",
+    "@netlify/blobs": "11.1.9",
+    "framer-motion": "14.14.0",
+    "gsap": "3.15.1",
+    "lucide-react": "1.77.0",
+    "next": "16.4.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "swr": "2.5.1",
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "0.187.0",
+    "typescript": "^5.9.0"
+  }
+}

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+data/
+*.sqlite3
+*.sqlite3-*
+.DS_Store
+node_modules/
+.next/
+*.tsbuildinfo
+next-env.d.ts
+.env*.local
+.netlify/
+frontend/out/
+frontend/public/catalogue/
